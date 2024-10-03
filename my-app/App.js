@@ -4,18 +4,19 @@ import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
   const [tarefa, setTarefa] = useState('')
+  const [tarefas, setTarefas] = useState([])
   const [mensagem, setMensagem] = useState('Tela inicial')
 
   const adicionar = () => {
-    setMensagem('Registro adicionado!!')
+    setTarefas([...tarefas, {id: tarefas.length('Registro adicionado!!')
   }
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title} >Lista de atividades</Text>
+      <Text style={styles.title} >Lista de atividades:</Text>
       <TextInput style={styles.input}
 
-        placeholder='Nome da tarefa'
+        placeholder='Nome da Nova Tarefa'
         value={tarefa}
         onChangeText={text => setTarefa(text)}
       />
@@ -31,13 +32,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5'
+    backgroundColor: '#f5f5f5',
+    padding: 40
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 20
+    marginBottom: 40
+  
   },
   input: {
     backgroundColor: '#fff',

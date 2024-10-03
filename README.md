@@ -9,8 +9,6 @@ npx expo start
 
 https://reactnative.dev/docs/components-and-apis
 
-https://reactnative.dev/docs/components-and-apis
-
 https://reactnative.dev/docs/intro-react-native-components
 
 https://reactnative.dev/docs/colors
