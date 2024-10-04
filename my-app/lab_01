@@ -11,11 +11,6 @@ export default function App() {
   const adicionar = () => {
     setProdutos([...produtos, { id: produtos.length + 1, nome: produto }])
     setProduto('')
-    setValorProduto([...valorproduto, { id: valorproduto.length + 1, nome: valor }])
-    setValor('')
-    setDescricaoProduto([...descricaoproduto, { id: descricaoproduto.length +1, nome: descricao }]
-    setDescricao('')
-    )
   }
 
   const remover = (id) => {
@@ -24,22 +19,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title} >Lista de produtos</Text>
+      <Text style={styles.title} >Lista de Mercadorias</Text>
       <TextInput style={styles.input}
 
         placeholder='digite o Nome do Produto'
         value={produto}
         onChangeText={text => setProduto(text)}
-
-        placeholder='digite o Valor do Produto'
-        value={valor}  
-        onChangeText={text => setValor(text)}
-
-        placeholder='digite uma Descrição'
-        value={descricao}
-        onChangeText={text => setDescricao(text)}
       />
-
 
       <TouchableOpacity style={styles.btnAdd} onPress={adicionar}>
         <Text style={styles.btnAddText} >Adicionar</Text>
